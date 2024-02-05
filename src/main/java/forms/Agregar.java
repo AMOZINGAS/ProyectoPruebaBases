@@ -218,9 +218,19 @@ public class Agregar extends javax.swing.JFrame {
     private void btnRestaurarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRestaurarActionPerformed
         // TODO add your handling code here:
         
-        txtNombres.setText("");
-        txtPaterno.setText("");
-        txtMaterno.setText("");
+        if(tipo == AccionCatalogoEnumerador.NUEVO){
+         
+            txtNombres.setText("");
+            txtPaterno.setText("");
+            txtMaterno.setText("");
+        
+        }else if(tipo == AccionCatalogoEnumerador.EDITAR){
+            
+            txtNombres.setText(empleado.getNombres());
+            txtPaterno.setText(empleado.getPaterno());
+            txtMaterno.setText(empleado.getMaterno());
+            
+        }
         
     }//GEN-LAST:event_btnRestaurarActionPerformed
 
